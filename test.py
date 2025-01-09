@@ -201,7 +201,9 @@ while True:
             sound.stop()
             alert_playing = False
         cv2.putText(frame, "Eyes Open: Not Sleepy", (10, height - 20), font, 1, (255, 255, 255), 1, cv2.LINE_AA)
-    
+        start_time=None
+        alert_playing=False
+        cv2.putText(frame, "Eyes Awake", (10, height - 20), font, 1, (0, 255, 0), 1, cv2.LINE_AA)
     if score < 0:
         score = 0   
     if score > 3:

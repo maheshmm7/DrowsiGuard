@@ -73,7 +73,7 @@ Place an `alarm.wav` file in the project directory. This sound will be played wh
 ### 1. Running the Script
 To start the drowsiness detection system, run:
 ```bash
-python drowsgaurd.py
+python drowsigaurd.py
 ```
 This will open the webcam feed and start tracking the driver's eye state, gaze direction, and head pose in real-time.
 

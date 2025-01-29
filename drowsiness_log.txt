@@ -2683,3 +2683,9 @@ Drowsiness detected at 2024-11-21 21:01:51 for 8.82 seconds
 2025-01-29 23:43:22 - Eyes Closed: Sleepy!
 2025-01-29 23:43:22 - Eyes Closed: Sleepy!
 2025-01-29 23:43:22 - Eyes Closed: Sleepy!
+2025-01-29 23:48:37 - Eyes Closed: Drowsy!
+2025-01-29 23:48:37 - Eyes Closed: Drowsy!
+2025-01-29 23:48:37 - Eyes Closed: Drowsy!
+2025-01-29 23:48:37 - Eyes Closed: Drowsy!
+2025-01-29 23:48:37 - Eyes Closed: Drowsy!
+2025-01-29 23:48:37 - Eyes Closed: Drowsy!

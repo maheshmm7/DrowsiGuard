@@ -126,6 +126,8 @@ def get_head_pose(shape):
     return rotation_vector, translation_vector
 
 def is_drowsy(eye_state_history):
+    if len(eye_state_history) == 0:
+        return False
     closed_count = sum(1 for state in eye_state_history if state == 'Close')
     return closed_count / len(eye_state_history) > 0.6
 
@@ -181,7 +183,7 @@ while True:
     cv2.rectangle(frame, (0, height - 50), (width, height), (0, 0, 0), thickness=cv2.FILLED)
     cv2.putText(frame, 'Score:' + str(score), (300, height - 20), font, 1, (255, 255, 255), 1, cv2.LINE_AA)
 
-    if is_drowsy(eye_state_history):
+    if len(eye_state_history) >= eye_state_history.maxlen and is_drowsy(eye_state_history):
         if start_time is None:
             start_time = time.time()
         elapsed_time = time.time() - start_time
@@ -201,9 +203,7 @@ while True:
             sound.stop()
             alert_playing = False
         cv2.putText(frame, "Eyes Open: Not Sleepy", (10, height - 20), font, 1, (255, 255, 255), 1, cv2.LINE_AA)
-        start_time=None
-        alert_playing=False
-        cv2.putText(frame, "Eyes Awake", (10, height - 20), font, 1, (0, 255, 0), 1, cv2.LINE_AA)
+
     if score < 0:
         score = 0   
     if score > 3:

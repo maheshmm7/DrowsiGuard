@@ -10,38 +10,76 @@ This project implements a **Drowsiness Detection System** using **Computer Visio
 - **Alert System:** Plays an alarm sound when drowsiness or distraction is detected.
 - **Face and Eye Detection:** Utilizes Haar cascades for detecting faces and eyes.
 
-## Prerequisites
 
-Before you begin, ensure that you have met the following requirements:
-- Python 3.x (preferably 3.7 or higher)
+## Prerequisites
+- **Python Version**: Python 3.7 - 3.9 (Python < 3.10 required)
 - Webcam for real-time monitoring
-- The following dependencies, listed in `requirements.txt` file
+- The following dependencies, listed in requirements.txt file
 
 ## Setup and Installation
 
-### 1. Create a Virtual Environment
-It is recommended to use a virtual environment for dependency management. You can create one using the following command:
+### 1. Using Virtual Environment (venv)
 
+#### 1.1 Create Virtual Environment
 ```bash
 python -m venv drowsiness_env
 ```
 
-### 2. Activate the Virtual Environment
-For Windows:
-```bash
-drowsiness_env\Scripts\activate
-```
+#### 1.2 Activate Virtual Environment
+- **Windows**: 
+  ```bash
+  drowsiness_env\Scripts\activate
+  ```
+- **macOS/Linux**: 
+  ```bash
+  source drowsiness_env/bin/activate
+  ```
 
-For macOS/Linux:
-```bash
-source drowsiness_env/bin/activate
-```
-
-### 3. Install Dependencies
-Install the required dependencies from the requirements.txt file:
+#### 1.3 Install Dependencies
 ```bash
 pip install -r requirements.txt
+pip install protobuf==3.20.0
 ```
+
+### 2. Using Conda Environment
+
+#### 2.1 Create Conda Environment
+```bash
+conda create --name drowsiness_env python=3.9 -y
+```
+
+#### 2.2 Activate Conda Environment
+```bash
+conda activate drowsiness_env
+```
+
+#### 2.3 Install Dependencies
+```bash
+pip install -r requirements.txt
+pip install protobuf==3.20.0
+```
+
+### 3. Verify Setup
+
+Check installed packages:
+```bash
+pip list
+```
+
+## Recommendations
+
+- **Conda is recommended** for managing complex dependencies, especially for machine learning projects with potential GPU support.
+- Always ensure you're in the correct virtual environment before running the project.
+- Keep your `requirements.txt` updated with all necessary dependencies.
+
+## Troubleshooting
+
+- If you encounter any installation issues, ensure you have the latest version of pip:
+  ```bash
+  pip install --upgrade pip
+  ```
+- Check Python version compatibility (Python 3.7 - 3.9 recommended)
+- Verify all system dependencies are installed
 
 Required libraries include:
 ```text
@@ -93,6 +131,24 @@ To exit the program, press `q` in the terminal or stop the script execution.
 
 - **Webcam not detected**: Ensure that your webcam is properly connected and accessible by other applications. Try restarting your machine if the issue persists.
 - **Model loading errors**: If you get an error related to loading the model (`cnnfinal.h5`), make sure the file is placed in the correct directory and the path is specified correctly in the script.
+
+## Reporting Issues and Contributing
+
+### Reporting Errors or Bugs
+
+1. **Check Existing Issues**
+   - Before reporting, search existing GitHub issues to avoid duplicates.
+
+2. **Create a Detailed Bug Report**
+   - Use GitHub Issues
+   - Include:
+     - Detailed description of the error
+     - Steps to reproduce
+     - Your environment details (OS, Python version, etc.)
+     - Full error traceback
+
+
+- Discuss in project discussions/comments
 
 ## Contributing
 
